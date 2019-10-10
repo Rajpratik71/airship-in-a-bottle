@@ -69,7 +69,7 @@ RAM_TOTAL=$(awk '/MemTotal/ {print $2}' /proc/meminfo)
 # Blindly assume that all storage on this VM is under root FS
 DISK_SIZE=$(df --output=source,size / | awk '/dev/ {print $2}')
 source /etc/os-release
-if [[ $CPU_COUNT -lt 4 || $RAM_TOTAL -lt 20000000 || $DISK_SIZE -lt 30000000 || $NAME != "Ubuntu" || $VERSION_ID != "16.04" ]]; then
+if [[ $DISK_SIZE -lt 30000000 || $NAME != "Ubuntu" || $VERSION_ID != "16.04" ]]; then
   echo "Error: minimum VM recommendations are not met. Exiting."
   exit 1
 fi
