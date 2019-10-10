@@ -25,7 +25,7 @@ Or, alternatively, if you have Vagrant installed, just run the following
 (only libvirt/kvm hypervisor is tested, but vagrant box supports VMware
 Desktop/Workstation/Fusion, Parallels, and Hyper-V):
 ```
-curl -O https://opendev.org/airship/airship-in-a-bottle/raw/branch/master/Vagrantfile
+curl -LO https://git.airshipit.org/cgit/airship-in-a-bottle/plain/Vagrantfile
 vagrant up
 ```
 
