@@ -164,7 +164,7 @@ function get_repo() {
   # $3 = refspec of repo pull
   cd ${WORKSPACE}
   if [ ! -d "$1" ] ; then
-    git clone $2 $1
+    git clone --depth=1 $2 $1
     if [ -n "$3" ] ; then
       pushd $1
       git pull $2 $3

@@ -16,7 +16,7 @@ To get started, run the following in a fresh Ubuntu 16.04 VM
 ```
 sudo -i
 mkdir -p /root/deploy && cd "$_"
-git clone https://opendev.org/airship/airship-in-a-bottle
+git clone --depth=1 https://opendev.org/airship/airship-in-a-bottle
 cd /root/deploy/airship-in-a-bottle/manifests/dev_single_node
 ./airship-in-a-bottle.sh
 ```
